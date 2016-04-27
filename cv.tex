@@ -1,0 +1,117 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,a4paper,roman,final]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75, margin=1in]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Boris}{Kirikov}
+%\title{Resume}                               % optional, remove / comment the line if not wanted
+\address{21B Ilmarisenkatu, a. 13}{50100 Mikkeli}{Finland}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+7~(911)~942~2297}
+\phone[mobile]{+358~(46)~565~1281}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+7~(812)~710~3833}
+%\phone[fax]{+3~(456)~789~012}
+\email{kribesk@gmail.com}
+\email{Boris.Kirikov@edu.mamk.fi}
+                               % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
+%\social[github]{jdoe}                              % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+
+\begin{document}
+\makecvtitle
+
+\section{Education}
+\cventry{2015}{Mikkeli University of Applied Science}{Information Technology}{}{}{}
+\cventry{2011--2014}{St Petersburg State University}{Faculty of Mathematics and Mechanics}{not finished}{}{}  % arguments 3 to 6 can be left empty
+\cventry{2012--2014}{Computer Science Center}{Data Mining}{}{}{}
+\subsection{Other eductaion}
+\cventry{2013}{Coursera/Stanford University}{Cryptography I}{}{}{}
+\cventry{2013}{Coursera/Stanford University and The University of British Columbia}{Game Theory}{}{}{}
+\cventry{2015}{Coursera/University of California, San Diego}{Finding Hidden Messages in DNA (Bioinformatics I)}{}{}{}
+
+
+\section{Experience}
+\subsection{Work}
+\cventry{2014}{Developer}{SJ Labs (magicJack)}{St Petersburg}{}{Working at department of research and development.\newline{}%
+\begin{itemize}%
+\item Tools for formal specification with DFA/EDFA pipeline;
+\item Internal XML based notification protocol;
+\item Code generation on Java (for Android) and ObjC (for iOS)
+\end{itemize}}
+\subsection{Study projects}
+\cventry{2013}{Functional JVM based language}{CS Center/JetBrains}{}{}{}
+\cventry{2012}{SQL-like database}{University}{}{}{}
+\cventry{2016}{Intelligent news aggregation tool}{University/Own}{}{}{}
+
+\section{Languages}
+\cvitemwithcomment{Russian}{Native}{}
+\cvitemwithcomment{English}{Upper-Intermediate}{}
+
+\section{Skills}
+\cvdoubleitem{Programming languages}{\textbf{Java}, \textbf{C}/C++, Pascal}{Scripting languages}{\textbf{Python}, \textbf{Perl}}
+\cvdoubleitem{Math tools}{\textbf{Mathematica}, MATLAB/Octave, \LaTeX, \textit{R}, \textbf{numpy/scipy/pandas}}{Web development}{HTML, CSS, JS, \textit{jQuery}, \textit{PHP}, \textit{Ruby on Rails}}
+\cvdoubleitem{Other skills}{antlr, xml (xslt, xsd, xmllint, etc), SQL (Transact), \textit{AWS}, \textit{Design Patterns}}{Networking}{CCNA, Cisco IOS, routing protocols, ip}
+\cvitem{Other tools}{\textbf{bash and UNIX utils and regex}, \textbf{vim}, \textbf{pandoc/md}, \textbf{far}}{}{}
+
+\section{Professional interests}
+\begin{itemize}
+\item Software engineering and security
+\item Data Science and \textit{Machine Learning}
+\item Biological and medical applications of modern science
+\end{itemize}
+
+\clearpage
+
+%-----       letter       ---------------------------------------------------------
+% recipient data
+%\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+%\date{September 30, 2015}
+%\opening{Dear Mr Smith,}
+%\closing{Yours faithfully,}
+%\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+%\makelettertitle
+%
+%% introduction
+%I wish to apply for opening of "Software Engineer" at your company. With my skills and experience
+%this would be perfect job for me.
+%
+%% body
+%As you can see from my enclosed CV I this job is tightly connected with my professional interests. 
+%Working for your company would offer a challenging career within highly competitive field.
+%
+%% conclusion
+%I look forward to hearing from you. Thank you for your time and consideration.
+%
+%
+%\makeletterclosing
+
+
+\end{document}
+
+
+%% end of file `template.tex'.
