@@ -1,0 +1,61 @@
+\documentclass[10pt,a4paper,roman,final]{moderncv}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8x]{inputenc}
+\usepackage[english, russian]{babel}
+\moderncvtheme[blue]{casual}
+\usepackage[scale=0.75, margin=1in]{geometry}
+
+\name{Борис}{Кириков}
+\phone[mobile]{+7~(911)~942~2297}
+\email{kribesk@gmail.com} 
+\homepage{kribesk.github.io}    
+
+\renewcommand{\rmdefault}{cmr}
+\renewcommand{\sfdefault}{cmss}
+\renewcommand{\ttdefault}{cmtt}
+
+\begin{document}
+\makecvtitle
+
+\section{Образование}
+\cventry{2015}{Mikkeli University of Applied Science}{Information Technology}{}{}{}
+\cventry{2011--2014}{СПбГУ}{Математико-Механический факультет}{не окончен}{}{}
+\cventry{2012--2014}{Computer Science Center}{Data Mining}{}{}{}
+\subsection{Другое образование}
+\cventry{2013}{Coursera/Stanford University}{Cryptography I}{}{}{}
+\cventry{2013}{Coursera/Stanford University and The University of British Columbia}{Game Theory}{}{}{}
+\cventry{2015}{Coursera/University of California, San Diego}{Finding Hidden Messages in DNA (Bioinformatics I)}{}{}{}
+
+\section{Опыт}
+\subsection{Работа}
+\cventry{2014}{Программист}{SJ Labs (magicJack)}{СПб}{}{Работа в отделе разработки.\newline{}%
+\begin{itemize}%
+\item Инструменты для проверки описаний конечных автоматов;
+\item Внутренний XML-подобный сигнальный протокол;
+\item Кодогенерация на Java (Android) и ObjC (iOS)
+\end{itemize}}
+\subsection{Учебные проекты}
+\cventry{2013}{Функциональный язык с компиляцией для JVM}{CS Center/JetBrains}{}{}{}
+\cventry{2012}{SQL-подобная база данных}{СПбГУ}{}{}{}
+\cventry{2016}{Инструмент агрегации новостей из социальных сетей}{Mikkeli UAS}{}{}{}
+
+\section{Языки}
+\cvitemwithcomment{Русский}{Родной}{}
+\cvitemwithcomment{Английский}{Upper-Intermediate}{}
+
+\section{Навыки}
+\cvdoubleitem{Языки программирования}{\textbf{Java}, \textbf{C}/C++, Pascal}{Скриптовые языки}{\textbf{Python}, \textbf{Perl}}
+\cvdoubleitem{Мат. пакеты}{\textbf{Mathematica}, MATLAB/Octave, \LaTeX, \textit{R}, \textbf{numpy/scipy/pandas}}{Web разработка}{HTML, CSS, JS, \textit{jQuery}, \textit{PHP}, \textit{Ruby on Rails}}
+\cvdoubleitem{Другие навыки}{antlr, xml (xslt, xsd, xmllint, etc), SQL (Transact), \textit{AWS}, \textit{Design Patterns}}{Сети}{CCNA, Cisco IOS, routing protocols, ip}
+\cvitem{Инструменты}{\textbf{bash and UNIX utils and regex}, \textbf{vim}, \textbf{pandoc/md}, \textbf{far}}{}{}
+
+\section{Профессиональные интересы}
+\begin{itemize}
+\item Разработка ПО и безопасность
+\item Data Science и \textit{Машинное обучение}
+\item Биологические и медицинские применения компьютерных наук
+\end{itemize}
+
+\end{document}

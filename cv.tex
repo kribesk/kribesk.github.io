@@ -8,6 +8,8 @@
 
 \documentclass[10pt,a4paper,roman,final]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
+%\usepackage[T2A]{fontenc}            % внутренняя кодировка  TeX
+
 % moderncv themes
 \moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
@@ -17,22 +19,22 @@
 % character encoding
 %\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage[utf8x]{inputenc}         % кодовая страница документа
+\usepackage[russian]{babel} % локализация и переносы
 
 % adjust the page margins
-\usepackage[scale=0.75, margin=1in]{geometry}
+\usepackage[scale=0.60, margin=0.75in]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
 \name{Boris}{Kirikov}
 %\title{Resume}                               % optional, remove / comment the line if not wanted
-\address{21B Ilmarisenkatu, a. 13}{50130 Mikkeli}{Finland}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
-\phone[mobile]{+7~(911)~942~2297}
-\phone[mobile]{+358~(46)~565~1281}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\address{Suksisepäntie 18 B 18}{50160 Mikkeli}{Finland}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+358~46~5651281}
 %\phone[fixed]{+7~(812)~710~3833}
 %\phone[fax]{+3~(456)~789~012}
 \email{kribesk@gmail.com}
-\email{Boris.Kirikov@edu.mamk.fi}
                                % optional, remove / comment the line if not wanted
 \homepage{kribesk.github.io}                         % optional, remove / comment the line if not wanted
 %\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
@@ -42,21 +44,30 @@
 %\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 
 
+\renewcommand{\rmdefault}{cmr} % Шрифт с засечками
+\renewcommand{\sfdefault}{cmss} % Шрифт без засечек
+\renewcommand{\ttdefault}{cmtt} % Моноширинный шрифт
+
+
 \begin{document}
 \makecvtitle
 
 \section{Education}
 \cventry{2015}{Mikkeli University of Applied Science}{Information Technology}{}{}{}
-\cventry{2011--2014}{St Petersburg State University}{Faculty of Mathematics and Mechanics}{not finished}{}{}  % arguments 3 to 6 can be left empty
 \cventry{2012--2014}{Computer Science Center}{Data Mining}{}{}{}
+\cventry{2011--2014}{St Petersburg State University}{Faculty of Mathematics and Mechanics}{not finished}{}{}  % arguments 3 to 6 can be left empty
 \subsection{Other eductaion}
+\cventry{2015}{Coursera/University of San Diego}{Bioinformatics I}{}{}{}
+\cventry{2013}{Coursera/Stanford University}{Game Theory}{}{}{}
 \cventry{2013}{Coursera/Stanford University}{Cryptography I}{}{}{}
-\cventry{2013}{Coursera/Stanford University and The University of British Columbia}{Game Theory}{}{}{}
-\cventry{2015}{Coursera/University of California, San Diego}{Finding Hidden Messages in DNA (Bioinformatics I)}{}{}{}
-
 
 \section{Experience}
 \subsection{Work}
+\cventry{2016}{Developer/Outsource}{KP}{Moscow}{}{Programming microservices on Python\newline{}%
+\begin{itemize}%
+\item Python, Beanstalk, Mongo, SQL, WAMP
+\item DB replication, notifications and streams
+\end{itemize}}
 \cventry{2014}{Developer}{SJ Labs (magicJack)}{St Petersburg}{}{Working at department of research and development.\newline{}%
 \begin{itemize}%
 \item Tools for formal specification with DFA/EDFA pipeline;
@@ -64,25 +75,24 @@
 \item Code generation on Java (for Android) and ObjC (for iOS)
 \end{itemize}}
 \subsection{Study projects}
+\cventry{2016}{Intelligent news aggregation tool}{}{}{}{}
 \cventry{2013}{Functional JVM based language}{CS Center/JetBrains}{}{}{}
-\cventry{2012}{SQL-like database}{University}{}{}{}
-\cventry{2016}{Intelligent news aggregation tool}{University/Own}{}{}{}
+\cventry{2012}{SQL-like database}{SPBSU}{}{}{}
 
 \section{Languages}
-\cvitemwithcomment{Russian}{Native}{}
-\cvitemwithcomment{English}{Upper-Intermediate}{}
+\cvdoubleitem{Russian}{Native}{German}{Beginner}
+\cvdoubleitem{English}{Upper-Intermediate}{Finnish}{Beginner}
 
 \section{Skills}
 \cvdoubleitem{Programming languages}{\textbf{Java}, \textbf{C}/C++, Pascal}{Scripting languages}{\textbf{Python}, \textbf{Perl}}
-\cvdoubleitem{Math tools}{\textbf{Mathematica}, MATLAB/Octave, \LaTeX, \textit{R}, \textbf{numpy/scipy/pandas}}{Web development}{HTML, CSS, JS, \textit{jQuery}, \textit{PHP}, \textit{Ruby on Rails}}
-\cvdoubleitem{Other skills}{antlr, xml (xslt, xsd, xmllint, etc), SQL (Transact), \textit{AWS}, \textit{Design Patterns}}{Networking}{CCNA, Cisco IOS, routing protocols, ip}
-\cvitem{Other tools}{\textbf{bash and UNIX utils and regex}, \textbf{vim}, \textbf{pandoc/md}, \textbf{far}}{}{}
+\cvdoubleitem{Math tools}{\textbf{Mathematica}, MATLAB/Octave, \LaTeX, \textit{R}, \textbf{numpy/scipy/pandas}}{Web development}{HTML, CSS/LESS, JS, \textit{jQuery}, \textit{PHP}, \textit{Ruby on Rails}}
+\cvdoubleitem{Other skills}{antlr, xml (xslt, xsd, xmllint, etc), SQL (Transact), \textit{AWS}, \textit{Design Patterns}}{Networking and Servers}{CCNA (all), Cisco IOS, routing protocols, ip, MTA Server Administration Fundamentals}
+\cvitem{Other tools}{\textbf{shells, UNIX utils, regex}, \textbf{vim}, \textbf{pandoc/md}, \textbf{far}}{}{}
 
 \section{Professional interests}
 \begin{itemize}
-\item Software engineering and security
-\item Data Science and \textit{Machine Learning}
-\item Biological and medical applications of modern science
+\item Software engineering, cluster and cloud, IoT
+\item Data Science, Algorithms, Bioinformatics
 \end{itemize}
 
 \clearpage
