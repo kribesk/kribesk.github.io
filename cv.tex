@@ -6,9 +6,10 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[10pt,a4paper,roman,final]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[10pt,a4paper,roman,final]{moderncv}        
+% possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
-%\usepackage[T2A]{fontenc}            % внутренняя кодировка  TeX
+%\usepackage[T2A]{fontenc}
 
 % moderncv themes
 \moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
@@ -19,8 +20,8 @@
 % character encoding
 %\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
-\usepackage[utf8x]{inputenc}         % кодовая страница документа
-\usepackage[russian]{babel} % локализация и переносы
+\usepackage[utf8x]{inputenc}
+%\usepackage[russian]{babel}
 
 % adjust the page margins
 \usepackage[scale=0.60, margin=0.75in]{geometry}
@@ -44,55 +45,45 @@
 %\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 
 
-\renewcommand{\rmdefault}{cmr} % Шрифт с засечками
-\renewcommand{\sfdefault}{cmss} % Шрифт без засечек
-\renewcommand{\ttdefault}{cmtt} % Моноширинный шрифт
+%\renewcommand{\rmdefault}{cmr}
+%\renewcommand{\sfdefault}{cmss}
+%\renewcommand{\ttdefault}{cmtt}
 
 
 \begin{document}
 \makecvtitle
 
 \section{Education}
-\cventry{2015}{Mikkeli University of Applied Science}{Information Technology}{}{}{}
+\cventry{2015}{South-Eastern Finland University of Applied Sciences}{Information Technology}{}{}{}
 \cventry{2012--2014}{Computer Science Center}{Data Mining}{}{}{}
-\cventry{2011--2014}{St Petersburg State University}{Faculty of Mathematics and Mechanics}{not finished}{}{}  % arguments 3 to 6 can be left empty
-\subsection{Other eductaion}
-\cventry{2015}{Coursera/University of San Diego}{Bioinformatics I}{}{}{}
-\cventry{2013}{Coursera/Stanford University}{Game Theory}{}{}{}
-\cventry{2013}{Coursera/Stanford University}{Cryptography I}{}{}{}
+\cventry{2011--2014}{St Petersburg State University}{Faculty of Mathematics and Mechanics/Department of probability and statistics}{not finished}{}{}  % arguments 3 to 6 can be left empty
+\subsection{Certificates and online courses}
+\cventry{}{See \href{https://kribesk.github.io/cv.html}{kribesk.github.io/cv.html}}{}{}{}{}
 
 \section{Experience}
 \subsection{Work}
-\cventry{2016}{Developer/Outsource}{KP}{Moscow}{}{Programming microservices on Python\newline{}%
-\begin{itemize}%
-\item Python, Beanstalk, Mongo, SQL, WAMP
-\item DB replication, notifications and streams
-\end{itemize}}
-\cventry{2014}{Developer}{SJ Labs (magicJack)}{St Petersburg}{}{Working at department of research and development.\newline{}%
-\begin{itemize}%
-\item Tools for formal specification with DFA/EDFA pipeline;
-\item Internal XML based notification protocol;
-\item Code generation on Java (for Android) and ObjC (for iOS)
-\end{itemize}}
+\cventry{2016}{Developer/Outsource}{KP}{Remote}{}{Freelance: python, mongo, mariadb replication, beanstalkd}
+\cventry{2014}{Developer}{SJ Labs (magicJack)}{St Petersburg}{}{Working at R\&D: DFA validation, migrating documentation to tex, generators for classes for XML based internal communication protocol}
 \subsection{Study projects}
-\cventry{2016}{Intelligent news aggregation tool}{}{}{}{}
+\cventry{2017}{\href{https://github.com/kribesk/security-project-mirai}{Running mirai botnet in lab and VMs}}{XAMK}{}{}{}
+\cventry{2017}{\href{https://github.com/kribesk/k8s-lab-setup}{Building and configuring K8s cluster}}{XAMK}{}{}{}
 \cventry{2013}{Functional JVM based language}{CS Center/JetBrains}{}{}{}
 \cventry{2012}{SQL-like database}{SPBSU}{}{}{}
 
 \section{Languages}
 \cvdoubleitem{Russian}{Native}{German}{Beginner}
-\cvdoubleitem{English}{Upper-Intermediate}{Finnish}{Beginner}
+\cvdoubleitem{English}{B2}{Finnish}{A1}
 
 \section{Skills}
-\cvdoubleitem{Programming languages}{\textbf{Java}, \textbf{C}/C++, Pascal}{Scripting languages}{\textbf{Python}, \textbf{Perl}}
-\cvdoubleitem{Math tools}{\textbf{Mathematica}, MATLAB/Octave, \LaTeX, \textit{R}, \textbf{numpy/scipy/pandas}}{Web development}{HTML, CSS/LESS, JS, \textit{jQuery}, \textit{PHP}, \textit{Ruby on Rails}}
-\cvdoubleitem{Other skills}{antlr, xml (xslt, xsd, xmllint, etc), SQL (Transact), \textit{AWS}, \textit{Design Patterns}}{Networking and Servers}{CCNA (all), Cisco IOS, routing protocols, ip, MTA Server Administration Fundamentals}
-\cvitem{Other tools}{\textbf{shells, UNIX utils, regex}, \textbf{vim}, \textbf{pandoc/md}, \textbf{far}}{}{}
+\cvdoubleitem{Programming languages}{\textbf{Java}, \textbf{C}/\textit{C++}, Pascal}{Scripting languages}{\textbf{Python}, \textbf{Perl}, JS}
+\cvdoubleitem{Math tools}{\textbf{Mathematica}, \textit{MATLAB}, \LaTeX, \textit{R}, \textit{numpy/scipy/pandas}}{Frontend}{HTML, CSS/LESS, \textit{jQuery}}
+\cvdoubleitem{Other skills}{xml (xslt, xsd, xmllint, etc), SQL (Transact), antlr, \textit{OOP patterns}}{Networking and Servers}{CCNA/Cisco IOS, routing protocols, ip networks, PXE/iPXE, \textit{terraform}}
+\cvitem{Favourite tools}{\textbf{bash, coreutils, regex}, \textbf{vim}, \textbf{pandoc+md}, \textbf{FAR}, \textbf{Vagrant}}{}{}
 
 \section{Professional interests}
 \begin{itemize}
-\item Software engineering, cluster and cloud, IoT
-\item Data Science, Algorithms, Bioinformatics
+\item Software engineering, clusters, IoT
+\item Algorithms, Bioinformatics
 \end{itemize}
 
 \clearpage
