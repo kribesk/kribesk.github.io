@@ -13,9 +13,9 @@
 
 % moderncv themes
 \moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{black}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
 %\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
@@ -38,11 +38,11 @@
 \email{kribesk@gmail.com}
                                % optional, remove / comment the line if not wanted
 \homepage{kribesk.github.io}                         % optional, remove / comment the line if not wanted
-%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+\social[linkedin]{kribesk}                        % optional, remove / comment the line if not wanted
 %\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
 %\social[github]{jdoe}                              % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\photo[128pt][0.4pt]{photo.jpg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 
 
 %\renewcommand{\rmdefault}{cmr}
@@ -51,69 +51,50 @@
 
 
 \begin{document}
+
 \makecvtitle
 
 \section{Education}
-\cventry{2017--2018}{Exchange: HS Esslingen}{Information Technology}{}{}{}
-\cventry{2015--2018}{South-Eastern Finland University of Applied Sciences}{Information Technology}{}{}{}
-\cventry{2012--2014}{Computer Science Center}{Data Mining}{}{}{}
-\cventry{2011--2014}{St Petersburg State University}{Faculty of Mathematics and Mechanics/Department of probability and statistics}{not finished}{}{}  % arguments 3 to 6 can be left empty
+\cventry{2017--2018}{Exchange in \href{https://www.hs-esslingen.de/}{Hochschule Esslingen}}{Information Technology}{}{}{Main areas: IT-Security, Embedded, Microservices}
+\cventry{2015--2018}{\href{https://www.xamk.fi/en/frontpage/}{South-Eastern Finland University of Applied Sciences (XAMK)}}{Information Technology}{}{}{Main areas: Cisco devices, Servers and Datacenters, Electronics}
+\cventry{2012--2014}{\href{https://compscicenter.ru/}{Computer Science Center}}{Data Mining}{}{}{Main areas: Algorithms, Discrete maths, Machine Learning}
+\cventry{2011--2014}{\href{http://english.spbu.ru/}{St Petersburg State University}}{Faculty of Mathematics and Mechanics/Department of probability and statistics}{not finished}{}{Main areas: Analysis, Algebra, Topology, Discrete Math, Optimization Problems, Probability Theory, Numeric Methods}
 \subsection{Certificates and online courses}
-\cventry{}{See \href{https://kribesk.github.io/cv.html}{kribesk.github.io/cv.html}}{}{}{}{}
+\cventry{}{See the list: \href{https://kribesk.github.io/cv.html}{kribesk.github.io/cv.html}}{}{}{}{CCNA courses, MTA, SECOPS, coursera courses, ...}
 
 \section{Experience}
 \subsection{Work}
-\cventry{2018}{Python Backend Developer}{Siemens}{Munich}{}{microservices, raspberry pi}
-\cventry{2016--2017}{Python Backend Developer}{Freelance}{}{}{mongodb, mariadb, replication protocol, beanstalkd, postgres, websocket, debian packaging}
-\cventry{2014--2015}{Developer}{SJ Labs (magicJack)}{St Petersburg}{}{DFA validation; xslt for docs; xsd specs \& codegen for xml message protocol}
+\cventry{2018}{Python Backend Developer}{Siemens}{Munich}{}{specification driven REST services with OpenAPI; asyncronous code with asyncio/aiohttp;
+RaspberryPI hardware: GPIO, SPI, I2C; simple electronics}
+\cventry{2016--2017}{Python Backend Developer}{Freelance}{}{}{custom replication tool from mariadb to mongodb using mariadb replication protocol + offline migration tool; 
+notification gateways from mariadb to queue service, from queue to WebSocket/WAMP; 
+different middleware services between postgres/sybase stored procedures and REST, WebSocket, device protocols(TCP);
+asyncronous code with gevent; python code obfuscation (with cython) and packaging (deb)}
+\cventry{2014--2015}{Developer}{SJ Labs (magicJack)}{St Petersburg}{}{state machine validation; documentation converter with xslt; protocol 
+specification with xsd, Perl tools for code generation in Java, ObjevctiveC, for mocking/testing, for documentation generation; legacy code refactoring and integration of generated classes}
 \subsection{Study projects}
-\cventry{2017}{\href{https://github.com/kribesk/security-project-mirai}{Running mirai botnet in lab and VMs}}{XAMK}{}{}{}
-\cventry{2017}{\href{https://github.com/kribesk/k8s-lab-setup}{Building and configuring kubernetes cluster}}{XAMK}{}{}{}
-\cventry{2013}{Functional JVM based language}{CS Center/JetBrains}{}{}{}
-\cventry{2012}{SQL-like database}{SPBSU}{}{}{}
+\cventry{2017}{\href{https://github.com/kribesk/security-project-mirai}{Running mirai botnet in lab environment}}{XAMK}{}{}{fixes in bot for available device; reproducable by scrips and vagrant VMs}
+\cventry{2017}{\href{https://github.com/kribesk/k8s-lab-setup}{Building and configuring baremetal kubernetes cluster in lab}}{XAMK}{}{}{getting matchbox working on Windows; configuring simple persistance and load-balancer; reproducable by scrips and vagrant VMs}
+\cventry{2013}{Simple Functional-oriented JVM-based language}{Computer Science Center + JetBrains}{}{}{grammar with antlr4; interpreter + compiler in Java}
+
+\pagebreak
 
 \section{Languages}
-\cvdoubleitem{Russian}{Native}{German}{A2}
+\cvdoubleitem{Russian}{Native}{German}{A2/B1}
 \cvdoubleitem{English}{B2/C1}{Finnish}{A1}
 
 \section{Skills}
-\cvdoubleitem{Programming languages}{Python, Perl, C}{And also}{Java, C++}
-\cvdoubleitem{Math tools}{Mathematica, MATLAB, \LaTeX, R}{Frontend basic tools}{HTML, jQuery, bootstrap}
-\cvdoubleitem{Databases}{Transact SQL, Postgres SQL, MongoDB}{Networking and Servers}{Cisco IOS, routing protocols, ip networks, PXE/iPXE, terraform}
-\cvdoubleitem{Cloud \& Cluster}{Docker, Kubernetes, Spring Boot}{Web Frameworks}{Flask, bottle}
-\cvdoubleitem{Other skills}{algorithms and data structures, debian packaging, xml (xslt, xsd), antlr}{Favourite tools}{vim, pandoc, Vagrant, FAR, JetBrains IDEs}
+\cvdoubleitem{Progr. languages}{Python; Perl; C}{And also}{Java; C++}
+\cvdoubleitem{Math tools}{Mathematica; MATLAB; \LaTeX; R}{Frontend basic skills in}{HTML; jQuery; bootstrap}
+\cvdoubleitem{Databases}{Transact SQL; Postgres SQL; MongoDB}{Networking and Servers}{Cisco: routers and switches, protocols and config; PXE/iPXE; Windows Server; terraform}
+\cvdoubleitem{Cloud \& Cluster}{Docker, Kubernetes; Spring Boot; AWS, pivotal}{Web Frameworks}{Flask; bottle}
+\cvdoubleitem{Other skills}{algorithms and data structures, debian packaging, xml (xslt, xsd), antlr}{Favourite tools}{vagrant, pandoc, PyCharm, FAR, vim}
 
-%\section{Professional interests}
-%\begin{itemize}
-%\item Software engineering, clusters, IoT
-%\item Algorithms, Bioinformatics
-%\end{itemize}
-
-\clearpage
-
-%-----       letter       ---------------------------------------------------------
-% recipient data
-%\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
-%\date{September 30, 2015}
-%\opening{Dear Mr Smith,}
-%\closing{Yours faithfully,}
-%\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
-%\makelettertitle
-%
-%% introduction
-%I wish to apply for opening of "Software Engineer" at your company. With my skills and experience
-%this would be perfect job for me.
-%
-%% body
-%As you can see from my enclosed CV I this job is tightly connected with my professional interests. 
-%Working for your company would offer a challenging career within highly competitive field.
-%
-%% conclusion
-%I look forward to hearing from you. Thank you for your time and consideration.
-%
-%
-%\makeletterclosing
-
+\section{Professional interests}
+\begin{itemize}
+\item InfoSec
+\item Distributed systems
+\end{itemize}
 
 \end{document}
 
